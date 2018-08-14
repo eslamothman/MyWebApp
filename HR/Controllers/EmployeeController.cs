@@ -11,7 +11,23 @@ namespace HR.Controllers
     {
         // GET: Employee
         public ActionResult Insert()        
-        {            
+        {
+            MyData mydatabase = new MyData();
+            //List<Department> departments = mydatabase.Departments.ToList(); 
+
+            List<Department> departments = new List<Department>();
+
+            var FirstDepartment = new Department() { Id = 1, DeprtName = "HR" };
+            var SecondDepartment = new Department() { Id = 2, DeprtName = "Marketing" };
+            var ThirdDepartment = new Department() { Id = 3, DeprtName = "Sales" };
+
+            departments.Add(FirstDepartment);
+            departments.Add(SecondDepartment);
+            departments.Add(ThirdDepartment);
+
+            ViewBag.Departments = new SelectList(departments, "Id", "DeprtName" ) { };
+            
+
             return View();
         }
         [HttpPost]

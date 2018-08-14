@@ -12,10 +12,7 @@ namespace HR.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        public string DeprtName { get; set; }
-
-
-
+        [Required(ErrorMessage ="Departemt Name Is Required")]
+        public string DeprtName { get; set; }        
     }
 }

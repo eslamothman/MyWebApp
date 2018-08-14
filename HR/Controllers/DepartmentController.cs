@@ -9,9 +9,6 @@ namespace HR.Controllers
 {
     public class DepartmentController : Controller
     {
-        private object mydata;
-
-        // GET: Department
         public ActionResult Insert()
         {
             return View();
