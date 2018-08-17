@@ -20,5 +20,16 @@ namespace HR.Models
 
 
 
+        public int DepartmentId { get; set; }
+        public int BrancheId { get; set; }
+
+
+
+        public virtual Department Department { get; set; }
+        public virtual Branche Branche { get; set; }
+
+
+
+
     }
 }

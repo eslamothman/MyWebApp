@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace HR.Models
 {
@@ -12,10 +8,7 @@ namespace HR.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        public string DeprtName { get; set; }
-
-
-
+        [Required(ErrorMessage ="Departemt Name Is Required")]
+        public string DeprtName { get; set; }        
     }
 }
